@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const config: Config = {
   content: [
@@ -12,6 +13,10 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        'founders-grotesk': ['FoundersGrotesk', ...fontFamily.sans],
+        // Add more custom font families as needed
       },
     },
   },
